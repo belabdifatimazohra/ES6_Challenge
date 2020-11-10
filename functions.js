@@ -1,56 +1,53 @@
 //Equality	of	three	values
- equal=(a,b,c) =>{  return (a===b && a===c) }
+const equal=(a,b,c) => a===b && a===c
 //console.log(equal(1,1,2));
 
 //Convert	Minutes	to	seconds:	
-minuteConvert =(a) =>{  // Verify if it's a numbre
-return !isNaN(a) ? a*60 : "Not a number"
-  
-}
+const minuteConvert =(a) => !isNaN(a) ? a*60 : 'Not a number' 
 
 //console.log(minuteConvert(1));
 
 //Area	of	a	rectangle:	
- area = (heigh,width) =>{ return typeof width == "number" && typeof heigh == "number"  ? heigh*width :  "Not a number";}
+const  area = (heigh,width) => typeof width == "number" && typeof heigh == "number"  ? heigh*width :  "Not a number" 
 //console.log(area(1,2))
 
 //The	next	number
- nextInt = (a) => {  return Number.isInteger(a) ? a+1 : "Not an integer"}
+const  nextInt = (a) => Number.isInteger(a) ? a+1 : "Not an integer"
 
 //Football	Points
- footballPts = (wins,draws,defeats) =>{  return(wins*3+draws)}	
+const  footballPts = (wins,draws,defeats) => wins*3+draws
 
 //Between	100	AND	200
- between = (n) =>{  return(n>=100 && n<= 200 )}
+const  between = (n) => n>=100 && n<= 200 
 
 // Hours and minutes to seconds
- convertHourMin = (h,min) => {  return(h*3600+min*60) }
+const  convertHourMin = (h,min) => h*3600+min*60
 
 //Equality	check
- equalityCheck = (a,b) => { return(a === b) }
+const  equalityCheck = (a,b) =>  a === b
+
 
 //Compare	Strings	by	Count	of	Characters
- compareStrings = (str1,str2) =>{  return str1.length> str2.length ? ("The	first	string	is	taller") : ("The	second	string is	taller") }
+const  compareStrings = (str1,str2) =>{  return str1.length> str2.length ? ("The	first	string	is	taller") : ("The	second	string is	taller") }
 
 //Unique	Chars	count
- uniqueCharsCount= (a)=> {  return [...new Set(a.replace(/\s/g,'').split(''))].length; }
+const  uniqueCharsCount= (a)=> [...new Set(a.replace(/\s/g,'').split(''))].length; 
 
 //Concatenate	First	And	Last	Name
- fullName = (firstName,lastName) => {  return (firstName + " " + lastName) }
-
+const  fullName = (firstName,lastName) => firstName + " " + lastName
 //Find	the	index	of	an	item	in	an	array
 
- index = (arr, a) => {  return arr.includes(a) ? arr.indexOf(a) : -1 }
+const  index = (arr, a) =>  arr.includes(a) ? arr.indexOf(a) : -1 
 
 //Is	in	range	:	isInRange(4,{min:2,max,10})
- inRange = (a,range) => {  return a >= range.min && a<= range.max }
+const  inRange = (a,range) => a >= range.min && a<= range.max 
 
 //Max	of	an	array
- maxArray = (arr) =>{  return Math.max(...arr); }
+const  maxArray = (arr) => Math.max(...arr); 
 
 //Convert	a	number	to	a	month
- monthName = (NbMonth) => {
- let months = [
+const  monthName = (NbMonth) => {
+ const months = [
     'January', 'February', 'March', 'April', 'May',
     'June', 'July', 'August', 'September',
     'October', 'November', 'December'
@@ -59,7 +56,7 @@ return !isNaN(a) ? a*60 : "Not a number"
  }
 
 //Factorial
- factorial = (nb) => {
+const  factorial = (nb) => {
   let fact=1;
   for(let i =nb; i>1; i--){
     fact *= i;
@@ -68,19 +65,19 @@ return !isNaN(a) ? a*60 : "Not a number"
 }
 
 //Count	Instance	of	a	character	in	a	string
- instanceCount = (str, char) => {
-  let arr = str.split('');
+const  instanceCount = (str, char) => {
+  const arr = str.split('');
   return arr.reduce((a, v) => (v === char ? a + 1 : a), 0);
   
 }
 
 //Absolute Sum
- absoluteSum = (arr) => {  return arr.reduce((a,v) => (a += Math.abs(v)),0) }
+const  absoluteSum = (arr) =arr.reduce((a,v) => (a += Math.abs(v)),0) 
 
 //Is a number Symmetrical
- isSymmetric = (a) =>{
+const  isSymmetric = (a) =>{
   
-  let str = (a+"").split('');
+  const str = (a+"").split('');
   for(let i=0; i< str.length/2; i++){
     if(str[i] != str[str.length-i-1])
       return false
@@ -89,21 +86,21 @@ return !isNaN(a) ? a*60 : "Not a number"
 }
 
 // Reverse the case
- reverseCase = (a) => {
+const  reverseCase = (a) => {
   
-  let arr = a.split('');
+  const arr = a.split('');
   return arr.reduce((a,v) => (v == v.toUpperCase() ? a += v.toLowerCase() : a += v.toUpperCase()),'')
   
 }
 
 // Get sum of people budget
- sumBudget = (arr) =>{  return arr.reduce((a,v) => (a += Number(v.budget.split('$').join(''))),0)+"$" }
+const  sumBudget = (arr) => arr.reduce((a,v) => (a += Number(v.budget.split('$').join(''))),0)+"$" 
 
 // Remove duplicate in an array
- removeDuplicate = (arr) => {  return [...new Set(arr)] }
+const  removeDuplicate = (arr) =>  [...new Set(arr)] 
 
 // Seven Booms
- sevenBooms = (arr) => {
+const  sevenBooms = (arr) => {
     
    for(let i=0;i<arr.length;i++){
      
@@ -117,9 +114,9 @@ return !isNaN(a) ? a*60 : "Not a number"
 }
 
 // Double Character Swap
- doubelCharSwap = (str, c1,c2) => {
+const  doubelCharSwap = (str, c1,c2) => {
   
-  let arr = str.split('');
+  const arr = str.split('');
   
   return arr.map((v) => {
   
@@ -130,9 +127,9 @@ return !isNaN(a) ? a*60 : "Not a number"
 }
 
 //find first characters that repeats
- firstRepeated = (str) => {
+const  firstRepeated = (str) => {
   
-  let arr = str.split('');
+  const arr = str.split('');
   for (let i = 0; i< arr.length; i++){
     
         for(let j = i+1; j< arr.length; j++){
@@ -144,27 +141,27 @@ return !isNaN(a) ? a*60 : "Not a number"
 }
 
 // Calculate the shopping cart price
- totalPrice = (arr) => {  return arr.reduce((a,v) => (a += Number(v.price.split('dz').join(''))),0)+"dz" }
+const  totalPrice = (arr) => arr.reduce((a,v) => (a += Number(v.price.split('dz').join(''))),0)+"dz" 
 
 // Get Top Student
- topStudent = (arr) => {   return Math.max(...(arr.map((s) => { return s.note; }))); }
+const  topStudent = (arr) =>  Math.max(...(arr.map((s) =>  s.note ))); 
 
 // The karaaca's encryption algorithm
- encrypt = (input) => {
+const  encrypt = (input) => {
    
    // Reverse the input
    let output = input.split("").reverse();
  
   // Replace vowels with chart
   let vowels = { a:0, e:1, i:2, o:2, u:3};
-  output = output.map((v) => {return (v in vowels) ? vowels[v] : v });
+  output = output.map((v) =>  (v in vowels) ? vowels[v] : v );
   
   // Add "aca"
   return (output.join('')+"aca");
 }
 
 // Sum of missing values
- sumMissingNumbers = (arr) => {
+const  sumMissingNumbers = (arr) => {
   
   const start = Math.min(...arr);
   const end = Math.max(...arr);
@@ -178,9 +175,9 @@ return !isNaN(a) ? a*60 : "Not a number"
 }
 
 // Double letters
- doubleLetters = (str) => {
+ const doubleLetters = (str) => {
   
-  let arr = str.split('');
+  const arr = str.split('');
   for(let i=0 ; i< arr.length; i++){
     if(arr[i] == arr[i+1])
       return true
@@ -189,7 +186,7 @@ return !isNaN(a) ? a*60 : "Not a number"
 }
 
 // Reverse
- reverse = (str) => {
+ const reverse = (str) => {
   
   let reverseStr='';
   
@@ -200,10 +197,10 @@ return !isNaN(a) ? a*60 : "Not a number"
 }
 
 // The reverser
- reverser = (str) => {  return reverseCase(reverse(str)) }
+ const reverser = (str) =>  reverseCase(reverse(str))
 
 // Convert to camelCase
- camelCasing = (str) =>{
+ const camelCasing = (str) =>{
   
   let arr = str.split(' ');
   // First word in lower case
@@ -218,16 +215,16 @@ return !isNaN(a) ? a*60 : "Not a number"
 }
 
 // Positive Count, Negative Sum
- posCountNegSum = (arr) => {
+ const posCountNegSum = (arr) => {
   
   let obj ={
     positiveCount: 0,
     negativeSum: 0,
   };
   
-  return arr.map(e => {e>0 ?  obj.positiveCount += 1 : obj.negativeSum +=e  }) ;
+  return arr.map(e => e>0 ?  obj.positiveCount += 1 : obj.negativeSum +=e ) ;
  // return obj
 }
 
 // Read and sum array
- sumTab = (tab) => {  return tab.reduce((a,v) => a += v,0)}
+ const sumTab = (tab) => tab.reduce((a,v) => a += v,0)
