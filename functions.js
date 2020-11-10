@@ -65,14 +65,10 @@ const  factorial = (nb) => {
 }
 
 //Count	Instance	of	a	character	in	a	string
-const  instanceCount = (str, char) => {
-  const arr = str.split('');
-  return arr.reduce((a, v) => (v === char ? a + 1 : a), 0);
-  
-}
+const  instanceCount = (str, char) => str.split('').reduce((a, v) => (v === char ? a + 1 : a), 0);
 
 //Absolute Sum
-const  absoluteSum = (arr) =arr.reduce((a,v) => (a += Math.abs(v)),0) 
+const  absoluteSum = (arr) => arr.reduce((a,v) => (a += Math.abs(v)),0) 
 
 //Is a number Symmetrical
 const  isSymmetric = (a) =>{
